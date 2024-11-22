@@ -1,0 +1,1 @@
+console.log("Hot reload is working 2!");

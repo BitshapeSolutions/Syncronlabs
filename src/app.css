@@ -1,0 +1,210 @@
+:root{
+    --syncron-Red: #ec382b;
+}
+
+body{
+    background: linear-gradient(79deg, #e1dbff 0%, #afa6bc 100%);
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1{
+    font-family: "Sofia Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    margin-bottom: 0;
+    line-height: 55px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.mb-5{
+    margin-bottom: 15px;
+}
+
+.p-5{
+    padding: 15px;
+}
+
+.title{
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 120%;
+
+    @media (max-width: 992px){
+        font-size: 45px;
+    }
+
+    @media (max-width: 768px){
+        font-size: 40px;
+    }
+
+}
+
+.description{
+
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+
+    @media (max-width: 992px){
+        font-size: 25px;
+    }
+
+    @media (max-width: 576px){
+        font-size: 20px;
+    }
+
+}
+.subtitle{
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.home-text{
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.header{
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+
+
+    .logoWrapper{
+
+        display: flex;
+        gap: 15px;
+
+        .logo{
+            height: 60px;
+        }
+
+        .logotext{
+
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: "Sofia Sans", sans-serif;
+
+            span.large{
+                font-size: 35px;
+                line-height: 30px;
+                font-weight: 300;
+                font-weight: 800;
+            }
+
+            span.small{
+                font-size: 22px;
+                line-height: 25px;
+                font-weight: 400;
+            }
+
+        }
+
+    }
+
+    .loginButton{
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Sofia Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        padding: 5px 15px;
+        border-radius: 50px;
+        color: #FFF;
+        cursor: pointer;
+        background-color: var(--syncron-Red);
+
+        &:hover{
+            background-color: #f44538;
+        }
+
+        @media (max-width: 576px){
+            display: none;
+        }
+
+    }
+
+}
+
+.hero_banner{
+    width: 100%;
+    position: relative;
+    margin-top: 90px;
+    padding-bottom: 100px;
+    background-image: url("./img/banner-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    overflow: hidden;
+    z-index: 1;
+    text-align: center;
+
+}
+
+
+.hero_banner:after{
+    content: '';
+    width: 354px;
+    height: 314px;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    background-image: url("./img/banner-left1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    z-index: -1;
+    opacity: 0.2;
+}
+.hero_banner:before{
+    content: '';
+    width: 354px;
+    height: 314px;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-image: url("./img/banner-top1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+    background-position: right;
+    z-index: -1;
+}
+
+@media (min-width: 1600px){
+    .hero_banner:after{
+        bottom: 175px;
+    }
+}
+
+.syncron-Red{
+    color: #ec3022;
+}
