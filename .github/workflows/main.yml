@@ -46,8 +46,12 @@ jobs:
         USERNAME: ${{ secrets.VPS_USER }}
       run: |
         # Start ssh-agent and add the private key
-        eval "$(ssh-agent -s)"
-        ssh-add <(echo "$SSH_PRIVATE_KEY")
+        #eval "$(ssh-agent -s)"
+        #ssh-add <(echo "$SSH_PRIVATE_KEY")
+
+        install -m 600 -D /dev/null ~/.ssh/id_rsa
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        ssh-keyscan -H ${{ secrets.VPS_HOST }} >  ~/.ssh/known_hosts
 
         # Deploy the build to the VPS
         rsync -avz --delete --partial --compress dist/ $USERNAME@$HOST:/var/www/syncronlabs.com
